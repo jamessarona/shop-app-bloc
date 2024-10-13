@@ -4,6 +4,7 @@ import 'package:shop_app/app_states.dart';
 
 class AppBlocs extends Bloc<AppEvents, AppStates> {
   AppBlocs() : super(InitStates()) {
+    print('app bloc');
     on<Increment>((event, serve) {
       serve(AppStates(counter: state.counter + 1));
     });

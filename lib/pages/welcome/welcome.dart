@@ -128,7 +128,7 @@ class _WelcomeState extends State<Welcome> {
               );
             } else {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => MyHomePage()));
+                  .pushNamedAndRemoveUntil('myHomePage', (route) => false);
             }
           },
           child: Container(
