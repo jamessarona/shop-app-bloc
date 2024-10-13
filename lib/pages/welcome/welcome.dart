@@ -38,7 +38,7 @@ class _WelcomeState extends State<Welcome> {
                       'Next',
                       'First See learning',
                       'Forget about a for of proper all knowledge in one learning',
-                      'image path',
+                      'assets/images/reading.png',
                     ),
                     _page(
                       2,
@@ -47,7 +47,7 @@ class _WelcomeState extends State<Welcome> {
                       'Connect With Everyone',
                       'Always keep in touch with your tutor & friend. Let'
                           's get connected ',
-                      'image path',
+                      'assets/images/boy.png',
                     ),
                     _page(
                       3,
@@ -55,21 +55,21 @@ class _WelcomeState extends State<Welcome> {
                       'Get Started',
                       'Always Fascinated Learning',
                       'Anywhere, amytime. The time is at our discrtion so study whenever you want',
-                      'image path',
+                      'assets/images/man.png',
                     ),
                   ],
                 ),
                 Positioned(
                   bottom: 100.h,
                   child: DotsIndicator(
-                    position: state.page.toDouble(),
+                    position: state.page,
                     dotsCount: 3,
                     mainAxisAlignment: MainAxisAlignment.center,
                     decorator: DotsDecorator(
                       color: Colors.grey,
                       activeColor: Colors.blue,
                       size: const Size.square(8.0),
-                      activeSize: const Size(10.0, 8.0),
+                      activeSize: const Size(18.0, 8.0),
                       activeShape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
@@ -92,7 +92,7 @@ Widget _page(int index, BuildContext context, String buttonName, String title,
       SizedBox(
         width: 345.w,
         height: 345.w,
-        child: const Text('Image one'),
+        child: Image.asset(imagePath, fit: BoxFit.cover),
       ),
       Container(
         child: Text(
