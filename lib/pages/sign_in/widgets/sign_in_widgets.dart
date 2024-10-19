@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shop_app/common/values/colors.dart';
 
 AppBar buildAppBar() {
   return AppBar(
@@ -8,14 +9,14 @@ AppBar buildAppBar() {
         1.0,
       ),
       child: Container(
-        color: Colors.grey.withOpacity(0.5),
+        color: AppColors.primarySecondaryBackground,
         height: 1.0,
       ),
     ),
     title: Text(
       'Log In',
       style: TextStyle(
-        color: Colors.black,
+        color: AppColors.primaryText,
         fontSize: 16.sp,
         fontWeight: FontWeight.normal,
       ),
@@ -71,11 +72,11 @@ Widget buildTextField(String hintText, String textStyle, String iconeName) {
     height: 50.h,
     margin: EdgeInsets.only(bottom: 20.h),
     decoration: BoxDecoration(
-      color: Colors.white,
+      color: AppColors.primaryBackground,
       borderRadius: BorderRadius.all(
         Radius.circular(15.w),
       ),
-      border: Border.all(color: Colors.black),
+      border: Border.all(color: AppColors.primaryText),
     ),
     child: Row(
       children: [
@@ -112,12 +113,12 @@ Widget buildTextField(String hintText, String textStyle, String iconeName) {
                   color: Colors.transparent,
                 ),
               ),
-              hintStyle: TextStyle(
-                color: Colors.grey.withOpacity(0.5),
+              hintStyle: const TextStyle(
+                color: AppColors.primarySecondaryElementText,
               ),
             ),
             style: TextStyle(
-              color: Colors.black,
+              color: AppColors.primaryText,
               fontFamily: 'Avemir',
               fontWeight: FontWeight.normal,
               fontSize: 14.sp,
@@ -127,6 +128,70 @@ Widget buildTextField(String hintText, String textStyle, String iconeName) {
           ),
         ),
       ],
+    ),
+  );
+}
+
+Widget forgotPossword() {
+  return SizedBox(
+    width: 260.w,
+    height: 44.h,
+    child: GestureDetector(
+      onTap: () {},
+      child: Text(
+        'Forgot Password',
+        style: TextStyle(
+          color: AppColors.primaryText,
+          decoration: TextDecoration.underline,
+          decorationColor: AppColors.primaryText,
+          fontSize: 12.sp,
+        ),
+      ),
+    ),
+  );
+}
+
+Widget buildLogInAndRegButton(String buttonName, String buttonType) {
+  return GestureDetector(
+    onTap: () {},
+    child: Container(
+      width: 325.w,
+      height: 50.h,
+      margin: EdgeInsets.only(
+        top: buttonType == 'login' ? 40.h : 5.h,
+      ),
+      decoration: BoxDecoration(
+        color: buttonType == 'login'
+            ? AppColors.primaryElement
+            : AppColors.primaryBackground,
+        borderRadius: BorderRadius.all(
+          Radius.circular(15.w),
+        ),
+        border: Border.all(
+            color: buttonType == 'login'
+                ? Colors.transparent
+                : AppColors.primaryFourElementText),
+        boxShadow: [
+          BoxShadow(
+            spreadRadius: 1,
+            blurRadius: 2,
+            offset: const Offset(0, 1),
+            color: Colors.grey.withOpacity(0.1),
+          ),
+        ],
+      ),
+      child: Center(
+        child: Text(
+          buttonName,
+          style: TextStyle(
+            color: buttonType == 'login'
+                ? AppColors.primaryBackground
+                : AppColors.primaryText,
+            fontSize: 16.sp,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+      ),
     ),
   );
 }

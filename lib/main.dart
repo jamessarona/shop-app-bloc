@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shop_app/app_blocs.dart';
 import 'package:shop_app/app_events.dart';
 import 'package:shop_app/app_states.dart';
+import 'package:shop_app/common/values/colors.dart';
 import 'package:shop_app/pages/sign_in/sign_in.dart';
 import 'package:shop_app/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:shop_app/pages/welcome/welcome.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             appBarTheme: const AppBarTheme(
               elevation: 0,
-              backgroundColor: Colors.white,
+              backgroundColor: AppColors.primaryBackground,
             ),
           ),
           home: const Welcome(),
