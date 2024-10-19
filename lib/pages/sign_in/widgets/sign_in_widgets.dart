@@ -58,7 +58,7 @@ Widget reusableText(String text) {
     child: Text(
       text,
       style: TextStyle(
-        color: Colors.grey.withOpacity(0.8),
+        color: AppColors.primaryFourthElementText.withOpacity(0.8),
         fontWeight: FontWeight.normal,
         fontSize: 14.sp,
       ),
@@ -170,13 +170,13 @@ Widget buildLogInAndRegButton(String buttonName, String buttonType) {
         border: Border.all(
             color: buttonType == 'login'
                 ? Colors.transparent
-                : AppColors.primaryFourElementText),
+                : AppColors.primaryFourthElementText),
         boxShadow: [
           BoxShadow(
             spreadRadius: 1,
             blurRadius: 2,
             offset: const Offset(0, 1),
-            color: Colors.grey.withOpacity(0.1),
+            color: AppColors.primaryFourthElementText.withOpacity(0.1),
           ),
         ],
       ),

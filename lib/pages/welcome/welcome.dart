@@ -69,7 +69,7 @@ class _WelcomeState extends State<Welcome> {
                     dotsCount: 3,
                     mainAxisAlignment: MainAxisAlignment.center,
                     decorator: DotsDecorator(
-                      color: Colors.grey,
+                      color: AppColors.primaryThreeElementText,
                       activeColor: AppColors.primaryElement,
                       size: const Size.square(8.0),
                       activeSize: const Size(18.0, 8.0),
@@ -142,7 +142,7 @@ class _WelcomeState extends State<Welcome> {
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.1),
+                  color: AppColors.primaryFourthElementText.withOpacity(0.1),
                   spreadRadius: 10,
                   blurRadius: 20,
                   offset: const Offset(0, 5),
