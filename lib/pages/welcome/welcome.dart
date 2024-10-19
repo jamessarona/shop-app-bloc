@@ -57,7 +57,7 @@ class _WelcomeState extends State<Welcome> {
                       context,
                       'Get Started',
                       'Always Fascinated Learning',
-                      'Anywhere, amytime. The time is at our discrtion so study whenever you want',
+                      'Anywhere, anytime. The time is at our discrtion so study whenever you want',
                       'assets/images/man.png',
                     ),
                   ],
@@ -113,7 +113,7 @@ class _WelcomeState extends State<Welcome> {
             subTitle,
             style: TextStyle(
               color: Colors.black.withOpacity(0.5),
-              fontSize: 14.sp,
+              fontSize: 13.sp,
               fontWeight: FontWeight.normal,
             ),
           ),
@@ -128,7 +128,7 @@ class _WelcomeState extends State<Welcome> {
               );
             } else {
               Navigator.of(context)
-                  .pushNamedAndRemoveUntil('myHomePage', (route) => false);
+                  .pushNamedAndRemoveUntil('signIn', (route) => false);
             }
           },
           child: Container(
