@@ -7,7 +7,7 @@ class EmailEvent extends SignInEvents {
   const EmailEvent(this.email);
 }
 
-class Passwordvent extends SignInEvents {
+class PasswordEvent extends SignInEvents {
   final String password;
-  const Passwordvent(this.password);
+  const PasswordEvent(this.password);
 }
