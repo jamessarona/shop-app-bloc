@@ -1,13 +1,14 @@
-abstract class SignInEvents {
-  const SignInEvents();
+abstract class SignInEvent {
+  const SignInEvent();
 }
 
-class EmailEvent extends SignInEvents {
+class EmailChanged extends SignInEvent {
+  const EmailChanged(this.email);
+
   final String email;
-  const EmailEvent(this.email);
 }
 
-class PasswordEvent extends SignInEvents {
+class PasswordChanged extends SignInEvent {
+  const PasswordChanged(this.password);
   final String password;
-  const PasswordEvent(this.password);
 }
